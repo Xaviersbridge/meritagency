@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biee Wave Facility Solutions Ltd — Professional Janitorial & Fumigation Services</title>
+<meta name="description" content="Biee Wave Facility Solutions Ltd: professional janitorial services and fumigation solutions for offices, schools, estates and homes. Book a professional cleaning today.">
+<meta property="og:title" content="Biee Wave Facility Solutions Ltd">
+<meta property="og:description" content="Your space reflects your standards. Professional janitorial services & fumigation solutions.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.jpg">
+<link rel="icon" href="logo-mark.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --mist:#F2F7FD;
+    --navy:#0B2A66;       /* logo wordmark navy */
+    --accent:#1663D6;     /* logo royal blue */
+    --accent-deep:#0D4AA8;
+    --sky:#2BB8F0;        /* logo wave cyan */
+    --grey:#55627A;
+    --line:#DCE6F2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{font-family:'Public Sans',sans-serif;background:var(--paper);color:var(--navy);line-height:1.6}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  .display{font-family:'Archivo Black',sans-serif;line-height:.98;letter-spacing:-.01em}
+  img.blend{mix-blend-mode:multiply}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:2px solid var(--navy)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+  .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--navy)}
+  .logo img{height:40px;width:auto}
+  .logo b{font-family:'Archivo Black';font-weight:400;font-size:1.1rem;line-height:1;display:block}
+  .logo small{display:block;font-size:.58rem;font-weight:700;letter-spacing:.14em;color:var(--grey);margin-top:.2rem}
+  nav.links{display:flex;gap:1.5rem;font-size:.9rem;font-weight:600}
+  nav.links a{color:var(--grey);text-decoration:none}
+  nav.links a:hover,nav.links a.active{color:var(--navy)}
+  nav.links a.active{box-shadow:inset 0 -2px 0 var(--accent)}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:.7rem 1.5rem;border-radius:6px;border:0;cursor:pointer;font:inherit;font-weight:700;transition:background .2s,transform .15s}
+  .btn:hover{background:var(--accent-deep)}
+  .btn:active{transform:scale(.97)}
+  .btn.dark{background:var(--navy)}
+  .btn.dark:hover{background:#061a42}
+  .btn.ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+  .btn.ghost:hover{background:var(--mist)}
+
+  /* Hero */
+  .hero{padding-top:72px;padding-bottom:64px;border-bottom:2px solid var(--navy);display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;align-items:center}
+  .hero .kicker{display:flex;gap:1rem;flex-wrap:wrap;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.4rem)}
+  .hero h1 .hl{color:var(--accent)}
+  .hero .tag{font-family:'Archivo Black';font-size:clamp(1.1rem,2.6vw,1.5rem);margin:1.4rem 0 1rem;line-height:1.2}
+  .hero p{max-width:34rem;color:var(--grey);font-size:1.08rem;margin-bottom:2rem}
+  .hero .cta-row{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+  .hero-logo{width:100%;max-width:360px;justify-self:end}
+
+  section{padding:70px 0}
+  .sec-title{font-family:'Archivo Black';font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:.6rem}
+  .sec-sub{color:var(--grey);max-width:38rem;margin-bottom:2.2rem}
+
+  /* Services */
+  .services{display:grid;grid-template-columns:repeat(2,1fr);border:2px solid var(--navy);border-radius:12px;overflow:hidden}
+  .svc{display:flex;gap:1rem;align-items:baseline;padding:1.2rem 1.5rem;border-bottom:2px solid var(--navy)}
+  .svc:nth-child(odd){border-right:2px solid var(--navy)}
+  .svc:nth-last-child(-n+2){border-bottom:0}
+  .svc .no{font-family:'Archivo Black';color:var(--accent);font-size:.85rem;min-width:1.8rem}
+  .svc h3{font-family:'Archivo Black';font-weight:400;font-size:1rem;margin-bottom:.2rem}
+  .svc p{font-size:.88rem;color:var(--grey)}
+
+  /* Why us band */
+  .band{background:var(--navy);color:#fff;border-radius:12px;padding:2.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+  .band h3{font-family:'Archivo Black';font-weight:400;font-size:1.05rem;color:var(--sky);margin-bottom:.4rem}
+  .band p{font-size:.92rem;opacity:.85}
+
+  /* How it works */
+  .sched{border-top:2px solid var(--navy)}
+  .slot{display:grid;grid-template-columns:120px 1fr;gap:1.4rem;align-items:baseline;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+  .slot .step{font-weight:700;font-size:.92rem;color:var(--accent)}
+  .slot h3{font-size:1.02rem;font-weight:700}
+  .slot p{font-size:.86rem;color:var(--grey)}
+
+  /* Plans */
+  .tix{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  .tier{border:2px solid var(--navy);border-radius:12px;padding:1.8rem;background:#fff}
+  .tier.hot{background:var(--navy);color:#fff}
+  .tier h3{font-family:'Archivo Black';font-weight:400;font-size:1.25rem;margin-bottom:.4rem}
+  .tier .lead{font-size:.95rem;opacity:.8;margin-bottom:1rem}
+  .tier ul{list-style:none;font-size:.92rem;margin-bottom:1.4rem}
+  .tier li{padding:.3rem 0 .3rem 1.4rem;position:relative}
+  .tier li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .tier.hot li::before{color:var(--sky)}
+  .tier .btn{width:100%;text-align:center}
+
+  /* Forms */
+  .panel{border:2px solid var(--navy);border-radius:12px;padding:2.6rem;background:#fff}
+  .panel .sec-sub{margin-bottom:0}
+  .form{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.2rem;margin-top:1.6rem}
+  .form .full{grid-column:1/-1}
+  .form label,.form legend{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:.35rem}
+  .form input,.form select,.form textarea{width:100%;font:inherit;padding:.72rem .9rem;border:2px solid var(--navy);border-radius:8px;background:var(--mist);color:var(--navy)}
+  .form textarea{min-height:110px;resize:vertical}
+  .form input:focus-visible,.form select:focus-visible,.form textarea:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+  .form fieldset{border:0}
+  .checks{display:flex;flex-wrap:wrap;gap:.6rem}
+  .checks label{display:flex;align-items:center;gap:.45rem;text-transform:none;letter-spacing:0;font-size:.92rem;font-weight:600;color:var(--navy);border:2px solid var(--navy);border-radius:8px;padding:.5rem .8rem;margin:0;cursor:pointer;background:var(--mist)}
+  .checks input{width:auto;accent-color:var(--accent)}
+  .form .actions{grid-column:1/-1;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+  .msg{font-weight:700;min-height:1.4em}
+  .msg.ok{color:#0A7A46}
+  .msg.err{color:#B3261E}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:1.4rem;align-items:start}
+  .info{border:2px solid var(--navy);border-radius:12px;padding:1.8rem;background:var(--navy);color:#fff}
+  .info h3{font-family:'Archivo Black';font-weight:400;font-size:1.1rem;margin-bottom:1rem}
+  .info dl{display:grid;gap:1rem}
+  .info dt{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sky)}
+  .info dd a{color:#fff}
+  .info .wa{margin-top:1.4rem;width:100%;text-align:center;background:#1FA855}
+  .info .wa:hover{background:#178a45}
+  .contact-grid .panel .form{grid-template-columns:1fr}
+
+  footer{border-top:2px solid var(--navy);padding:2.2rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.86rem;color:var(--grey)}
+  footer a{color:var(--grey)}
+
+  .mobile-tabs{display:none}
+
+  @media (max-width:900px){
+    nav.links{display:none}
+    .hero{grid-template-columns:1fr}
+    .hero-logo{display:none}
+    .services{grid-template-columns:1fr}
+    .svc:nth-child(odd){border-right:0}
+    .svc:nth-last-child(2){border-bottom:2px solid var(--navy)}
+    .band{grid-template-columns:1fr;padding:1.8rem}
+    .slot{grid-template-columns:1fr;gap:.2rem}
+    .tix,.contact-grid,.form{grid-template-columns:1fr}
+    .panel{padding:1.8rem}
+    .logo small{display:none}
+    .mobile-tabs{display:grid;grid-template-columns:repeat(3,1fr);position:sticky;top:68px;z-index:39;background:#fff;border-bottom:2px solid var(--navy)}
+    .mobile-tabs a{text-align:center;padding:.7rem 0;font-weight:700;font-size:.85rem;color:var(--navy);text-decoration:none}
+    .mobile-tabs a+a{border-left:2px solid var(--navy)}
+    .mobile-tabs a.active{background:var(--accent);color:#fff}
+    html{scroll-padding-top:120px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <img class="blend" src="logo-mark.jpg" alt="">
+      <span><b>BIEE WAVE</b><small>FACILITY SOLUTIONS LTD</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#book" data-tab>Bookings</a>
+      <a href="#careers" data-tab>Work with us</a>
+      <a href="#contact" data-tab>Contact us</a>
+    </nav>
+    <a class="btn" href="#book">Book a clean</a>
+  </div>
+</header>
+<nav class="mobile-tabs" aria-label="Quick links">
+  <a href="#book" data-tab>Book</a>
+  <a href="#careers" data-tab>Careers</a>
+  <a href="#contact" data-tab>Contact</a>
+</nav>
+
+<main>
+  <section class="hero wrap">
+    <div>
+      <div class="kicker">
+        <span>Janitorial</span><span>·</span><span>Fumigation</span><span>·</span><span>Facility management</span>
+      </div>
+      <h1 class="display">YOUR SPACE REFLECTS <span class="hl">YOUR STANDARDS.</span></h1>
+      <p class="tag">Professional Janitorial Services &amp; Fumigation Solutions</p>
+      <p>A clean environment is an investment in health, productivity and peace of mind. At Biee Wave Facility Solutions Ltd, we deliver reliable janitorial and fumigation services that keep your spaces spotless, safe and welcoming.</p>
+      <div class="cta-row">
+        <a class="btn" href="#book">Book a professional cleaning</a>
+        <a class="btn ghost" href="#services">See our services</a>
+      </div>
+    </div>
+    <img class="hero-logo blend" src="logo.jpg" alt="Biee Wave Facility Solutions Ltd logo">
+  </section>
+
+  <section class="wrap" id="services">
+    <h2 class="sec-title">What we do</h2>
+    <p class="sec-sub">From a single home to a whole estate — one team for cleaning, pest control and the upkeep of your property.</p>
+    <div class="services">
+      <div class="svc"><span class="no">01</span><div><h3>Office Cleaning</h3><p>Workspaces, restrooms, kitchens and shared areas, scheduled around your hours.</p></div></div>
+      <div class="svc"><span class="no">02</span><div><h3>School Cleaning</h3><p>Classrooms, halls and facilities kept clean and hygienic for students and staff.</p></div></div>
+      <div class="svc"><span class="no">03</span><div><h3>Estate Cleaning</h3><p>Common areas, walkways and shared facilities across residential estates.</p></div></div>
+      <div class="svc"><span class="no">04</span><div><h3>Post-Construction Cleaning</h3><p>Dust, debris and residue cleared so a new building is ready to use.</p></div></div>
+      <div class="svc"><span class="no">05</span><div><h3>Move-In / Move-Out Cleaning</h3><p>A complete top-to-bottom clean before you move in or after you move out.</p></div></div>
+      <div class="svc"><span class="no">06</span><div><h3>Post-Renovation Cleaning</h3><p>Paint, plaster and dust removed after building or renovation work.</p></div></div>
+      <div class="svc"><span class="no">07</span><div><h3>Pest Control</h3><p>Fumigation and treatment to clear and keep out pests.</p></div></div>
+      <div class="svc"><span class="no">08</span><div><h3>Property Management</h3><p>Ongoing care and upkeep of your property, handled for you.</p></div></div>
+      <div class="svc"><span class="no">09</span><div><h3>Environmental Sanitation</h3><p>Sanitation of surroundings, drains and outdoor areas.</p></div></div>
+      <div class="svc"><span class="no">10</span><div><h3>Home Cleaning</h3><p>Regular or one-off cleaning to keep your home fresh and tidy.</p></div></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="band">
+      <div><h3>Health</h3><p>Clean, sanitised spaces mean fewer germs and a healthier place to live, learn and work.</p></div>
+      <div><h3>Productivity</h3><p>People do their best work in spaces that are tidy, fresh and well kept.</p></div>
+      <div><h3>Peace of mind</h3><p>One reliable team for cleaning and fumigation, so you can focus on everything else.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="how">
+    <h2 class="sec-title">How it works</h2>
+    <p class="sec-sub">From booking to spotless in four steps.</p>
+    <div class="sched">
+      <div class="slot"><span class="step">STEP 1</span><div><h3>Request a booking</h3><p>Tell us the service, location and when you need us using the form below.</p></div></div>
+      <div class="slot"><span class="step">STEP 2</span><div><h3>We confirm</h3><p>We call or WhatsApp you to confirm the details and give you a quote.</p></div></div>
+      <div class="slot"><span class="step">STEP 3</span><div><h3>Our team arrives</h3><p>Trained, uniformed staff with the right supplies and equipment.</p></div></div>
+      <div class="slot"><span class="step">STEP 4</span><div><h3>Spotless, safe, welcoming</h3><p>Walk through the finished work with us before we leave.</p></div></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="plans">
+    <h2 class="sec-title">One-off or ongoing</h2>
+    <p class="sec-sub">Every space is different, so we quote each job individually. Tell us what you need and we'll get back to you.</p>
+    <div class="tix">
+      <div class="tier hot">
+        <h3>Contract cleaning</h3>
+        <p class="lead">For offices, schools and estates that need regular care.</p>
+        <ul>
+          <li>Daily, weekly or monthly schedules</li>
+          <li>Dedicated team for your site</li>
+          <li>Cleaning, sanitation &amp; pest control in one</li>
+        </ul>
+        <a class="btn" href="#book" data-service="Office cleaning">Request a contract quote</a>
+      </div>
+      <div class="tier">
+        <h3>One-off service</h3>
+        <p class="lead">For homes, moves and after building work.</p>
+        <ul>
+          <li>Home, move-in / move-out cleaning</li>
+          <li>Post-construction &amp; post-renovation</li>
+          <li>Fumigation and pest control</li>
+        </ul>
+        <a class="btn dark" href="#book" data-service="Home cleaning">Book a one-off service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKINGS -->
+  <section class="wrap" id="book">
+    <div class="panel">
+      <h2 class="sec-title">Book a professional cleaning</h2>
+      <p class="sec-sub">Fill this in and we'll contact you to confirm your booking and quote.</p>
+      <form class="form" id="bookForm" novalidate>
+        <div>
+          <label for="b-name">Full name</label>
+          <input id="b-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="b-phone">Phone / WhatsApp</label>
+          <input id="b-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div>
+          <label for="b-email">Email</label>
+          <input id="b-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="b-service">Service</label>
+          <select id="b-service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>Office cleaning</option>
+            <option>School cleaning</option>
+            <option>Estate cleaning</option>
+            <option>Post-construction cleaning</option>
+            <option>Move-in / move-out cleaning</option>
+            <option>Post-renovation cleaning</option>
+            <option>Pest control / fumigation</option>
+            <option>Property management</option>
+            <option>Environmental sanitation</option>
+            <option>Home cleaning</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="b-address">Address</label>
+          <input id="b-address" name="address" type="text" autocomplete="street-address" placeholder="Building, street, area, city" required>
+        </div>
+        <div>
+          <label for="b-date">Preferred date</label>
+          <input id="b-date" name="date" type="date" required>
+        </div>
+        <div>
+          <label for="b-time">Preferred time</label>
+          <select id="b-time" name="time" required>
+            <option value="">Choose a time</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
+        <div>
+          <label for="b-type">Type of property</label>
+          <select id="b-type" name="property">
+            <option>Home / apartment</option><option>Office</option><option>School</option><option>Estate</option><option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="b-freq">How often?</label>
+          <select id="b-freq" name="frequency">
+            <option>One-off</option><option>Daily</option><option>Weekly</option><option>Monthly</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="b-notes">Anything we should know? (optional)</label>
+          <textarea id="b-notes" name="notes" placeholder="Size of the space, number of rooms or floors, areas to focus on…"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Request booking</button>
+          <p class="msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CAREERS -->
+  <section class="wrap" id="careers">
+    <div class="panel">
+      <h2 class="sec-title">Work with us</h2>
+      <p class="sec-sub">We're always looking for reliable, hardworking people to join the Biee Wave team. Apply below and we'll get in touch.</p>
+      <form class="form" id="jobForm" novalidate>
+        <div>
+          <label for="j-name">Full name</label>
+          <input id="j-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="j-phone">Phone / WhatsApp</label>
+          <input id="j-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div>
+          <label for="j-email">Email (optional)</label>
+          <input id="j-email" name="email" type="email" autocomplete="email">
+        </div>
+        <div>
+          <label for="j-area">Area you live in</label>
+          <input id="j-area" name="area" type="text" required>
+        </div>
+        <div>
+          <label for="j-role">Role</label>
+          <select id="j-role" name="role" required>
+            <option value="">Choose a role</option>
+            <option>Cleaner / janitor</option>
+            <option>Fumigation / pest control technician</option>
+            <option>Supervisor / team lead</option>
+            <option>Office / admin</option>
+          </select>
+        </div>
+        <div>
+          <label for="j-exp">Experience</label>
+          <select id="j-exp" name="experience">
+            <option>None — happy to be trained</option>
+            <option>Less than 1 year</option>
+            <option>1 – 3 years</option>
+            <option>3+ years</option>
+          </select>
+        </div>
+        <fieldset class="full">
+          <legend>When can you work?</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="availability" value="weekdays"> Weekdays</label>
+            <label><input type="checkbox" name="availability" value="weekends"> Weekends</label>
+            <label><input type="checkbox" name="availability" value="mornings"> Mornings</label>
+            <label><input type="checkbox" name="availability" value="evenings"> Evenings</label>
+          </div>
+        </fieldset>
+        <div class="full">
+          <label for="j-about">Tell us a little about yourself (optional)</label>
+          <textarea id="j-about" name="about"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Send application</button>
+          <p class="msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="wrap" id="contact" style="padding-bottom:96px">
+    <h2 class="sec-title">Contact us</h2>
+    <p class="sec-sub">Questions, quotes for large spaces, or anything else — call, WhatsApp, email or send us a message.</p>
+    <div class="contact-grid">
+      <div class="info">
+        <h3>Reach us directly</h3>
+        <dl>
+          <div><dt>Phone</dt><dd><a href="tel:+2349041145304">+234 904 114 5304</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/2349041145304" target="_blank" rel="noopener">+234 904 114 5304</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info.bieewavefacility@gmail.com">info.bieewavefacility@gmail.com</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/bieewavefacilitysolutions" target="_blank" rel="noopener">@bieewavefacilitysolutions</a></dd></div>
+        </dl>
+        <a class="btn wa" href="https://wa.me/2349041145304" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+      <div class="panel">
+        <form class="form" id="contactForm" novalidate>
+          <div>
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="c-msg">Message</label>
+            <textarea id="c-msg" name="message" required></textarea>
+          </div>
+          <div class="actions">
+            <button class="btn" type="submit">Send message</button>
+            <p class="msg" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Biee Wave Facility Solutions Ltd</span>
+  <span><a href="tel:+2349041145304">+234 904 114 5304</a> · <a href="mailto:info.bieewavefacility@gmail.com">info.bieewavefacility@gmail.com</a> · <a href="https://www.instagram.com/bieewavefacilitysolutions" target="_blank" rel="noopener">@bieewavefacilitysolutions</a></span>
+</footer>
+
+<script>
+  // Forms validate in the browser only — connect them to email or a form service before going live.
+  const emailOk = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  const phoneOk = v => v.replace(/[^\d]/g, '').length >= 10;
+
+  function wire(id, okText) {
+    const f = document.getElementById(id);
+    const msg = f.querySelector('.msg');
+    f.addEventListener('submit', e => {
+      e.preventDefault();
+      let bad = null;
+      for (const el of f.querySelectorAll('input,select,textarea')) {
+        const v = el.value.trim();
+        if (el.required && !v) { bad = el; break; }
+        if (el.type === 'email' && v && !emailOk(v)) { bad = el; break; }
+        if (el.type === 'tel' && v && !phoneOk(v)) { bad = el; break; }
+      }
+      if (bad) {
+        const name = bad.labels[0]?.textContent.replace(/\(optional\)/i, '').trim().toLowerCase();
+        msg.textContent = `Please check your ${name}.`;
+        msg.className = 'msg err';
+        bad.focus();
+        return;
+      }
+      msg.textContent = okText(f.elements.name.value.trim().split(' ')[0]);
+      msg.className = 'msg ok';
+      f.reset();
+    });
+  }
+
+  wire('bookForm', n => `Thanks, ${n} — booking requested. We'll contact you shortly to confirm.`);
+  wire('jobForm', n => `Thanks, ${n} — application received. We'll be in touch.`);
+  wire('contactForm', n => `Thanks, ${n} — message sent. We'll get back to you soon.`);
+
+  document.getElementById('b-date').min = new Date().toISOString().split('T')[0];
+
+  document.querySelectorAll('[data-service]').forEach(a =>
+    a.addEventListener('click', () => { document.getElementById('b-service').value = a.dataset.service; }));
+
+  const tabs = document.querySelectorAll('[data-tab]');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      tabs.forEach(t => t.classList.toggle('active', t.getAttribute('href') === '#' + en.target.id));
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ['book', 'careers', 'contact'].forEach(id => obs.observe(document.getElementById(id)));
+</script>
+</body>
+</html>
